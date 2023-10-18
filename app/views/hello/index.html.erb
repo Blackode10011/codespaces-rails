@@ -1,34 +1,45 @@
-<nav id="navbar" class="">
-  <div class="nav-wrapper">
-    <!-- Navbar Logo -->
-    <div class="logo">
-      <!-- Logo Placeholder for Illustration -->
-      <a href="#home"><img width="100px" height="auto" src="artdigital.png"></a>
-    </div>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Art Digital86</title>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <link rel="stylesheet" type="text/css" href="hello.css">
+  
+  <!-- Link to your CSS stylesheet -->
+</head>
+<body>
+  <nav id="navbar" class="">
+    <div class="nav-wrapper">
+      <!-- Navbar Logo -->
+      <div class="logo">
+        <!-- Logo Placeholder for Illustration -->
+        <a href="#home"><img width="100px" height="auto" src="artdigital.png"></a>
+      </div>
 
-    <!-- Navbar Links -->
+      <!-- Navbar Links -->
+      <ul id="menu">
+        <li><%= link_to 'Home', root_path %></li>
+        <li><%= link_to 'Services', services_path %></li>
+        <li><%= link_to 'About', about_path %></li>
+        <li><%= link_to 'Contact', contact_path %></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Menu Icon -->
+  <div class="menuIcon">
+    <span class="icon icon-bars"></span>
+    <span class="icon icon-bars overlay"></span>
+  </div>
+
+  <div class="overlay-menu">
     <ul id="menu">
-      <li><a href="#home">Home</a></li><!--
-   --><li><a href="#services">Services</a></li><!--
-   --><li><a href="#about">About</a></li><!--
-   --><li><a href="#contact">Contact</a></li>
+      <li><a href="<%= home_path %>">Home</a></li>
+      <li><a href="<%= services_path %>">Services</a></li>
+      <li><a href="<%= about_path %>">About</a></li>
+      <li><a href="<%= contact_path %>">Contact</a></li>
+      <!-- Other menu items -->
     </ul>
   </div>
-</nav>
-
-
-<!-- Menu Icon -->
-<div class="menuIcon">
-  <span class="icon icon-bars"></span>
-  <span class="icon icon-bars overlay"></span>
-</div>
-
-
-<div class="overlay-menu">
-  <ul id="menu">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-</div>
+</body>
+</html>
